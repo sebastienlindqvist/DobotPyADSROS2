@@ -1,0 +1,24 @@
+[1.015s] Invoking command in '/home/vboxuser/ros2_ws/src/py_srvcli': PYTHONPATH=/home/vboxuser/ros2_ws/src/py_srvcli/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/ros2_ws/src/py_srvcli/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/py_srvcli build --build-base /home/vboxuser/ros2_ws/src/py_srvcli/build/py_srvcli/build install --record /home/vboxuser/ros2_ws/src/py_srvcli/build/py_srvcli/install.log --single-version-externally-managed install_data
+[1.297s] running egg_info
+[1.299s] writing build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[1.300s] writing dependency_links to build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[1.301s] writing entry points to build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[1.302s] writing requirements to build/py_srvcli/py_srvcli.egg-info/requires.txt
+[1.303s] writing top-level names to build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[1.305s] reading manifest file 'build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[1.305s] adding license file 'LICENSE'
+[1.305s] writing manifest file 'build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[1.306s] running build
+[1.306s] running build_py
+[1.307s] running install
+[1.307s] running install_lib
+[1.310s] running install_data
+[1.310s] running install_egg_info
+[1.315s] removing '/home/vboxuser/ros2_ws/src/py_srvcli/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info' (and everything under it)
+[1.315s] Copying build/py_srvcli/py_srvcli.egg-info to /home/vboxuser/ros2_ws/src/py_srvcli/install/py_srvcli/lib/python3.10/site-packages/py_srvcli-0.0.0-py3.10.egg-info
+[1.315s] running install_scripts
+[1.332s] Installing TwinCAT_Add_Route script to /home/vboxuser/ros2_ws/src/py_srvcli/install/py_srvcli/lib/py_srvcli
+[1.334s] Installing client script to /home/vboxuser/ros2_ws/src/py_srvcli/install/py_srvcli/lib/py_srvcli
+[1.334s] Installing service script to /home/vboxuser/ros2_ws/src/py_srvcli/install/py_srvcli/lib/py_srvcli
+[1.335s] writing list of installed files to '/home/vboxuser/ros2_ws/src/py_srvcli/build/py_srvcli/install.log'
+[1.390s] Invoked command in '/home/vboxuser/ros2_ws/src/py_srvcli' returned '0': PYTHONPATH=/home/vboxuser/ros2_ws/src/py_srvcli/build/py_srvcli/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vboxuser/ros2_ws/src/py_srvcli/install/py_srvcli/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/py_srvcli build --build-base /home/vboxuser/ros2_ws/src/py_srvcli/build/py_srvcli/build install --record /home/vboxuser/ros2_ws/src/py_srvcli/build/py_srvcli/install.log --single-version-externally-managed install_data

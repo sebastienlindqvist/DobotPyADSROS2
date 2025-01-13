@@ -1,0 +1,73 @@
+[0.034s] Invoking command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/vboxuser/ros2_ws/src/examples/rclcpp/services/minimal_service -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service
+[0.169s] -- The C compiler identification is GNU 11.4.0
+[0.383s] -- The CXX compiler identification is GNU 11.4.0
+[0.408s] -- Detecting C compiler ABI info
+[0.685s] -- Detecting C compiler ABI info - done
+[0.694s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.694s] -- Detecting C compile features
+[0.695s] -- Detecting C compile features - done
+[0.700s] -- Detecting CXX compiler ABI info
+[1.043s] -- Detecting CXX compiler ABI info - done
+[1.062s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.062s] -- Detecting CXX compile features
+[1.069s] -- Detecting CXX compile features - done
+[1.093s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.442s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.551s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.794s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[1.910s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.960s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.004s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.036s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.076s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.156s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[2.341s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.363s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.788s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.882s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.024s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.085s] -- Looking for pthread.h
+[3.276s] -- Looking for pthread.h - found
+[3.278s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.431s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.435s] -- Found Threads: TRUE  
+[3.575s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.841s] -- Added test 'copyright' to check source files copyright and LICENSE
+[3.850s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.850s] -- Configured cppcheck include dirs: 
+[3.850s] -- Configured cppcheck exclude dirs and/or files: 
+[3.858s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[3.858s] -- Configured cpplint exclude dirs and/or files: 
+[3.885s] -- Added test 'lint_cmake' to check CMake code style
+[3.885s] -- Added test 'uncrustify' to check C / C++ code style
+[3.885s] -- Configured uncrustify additional arguments: 
+[3.887s] -- Added test 'xmllint' to check XML markup files
+[3.888s] -- Configuring done
+[3.906s] -- Generating done
+[3.909s] -- Build files have been written to: /home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service
+[3.939s] Invoked command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/vboxuser/ros2_ws/src/examples/rclcpp/services/minimal_service -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service
+[3.939s] Invoking command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service -- -j6 -l6
+[6.574s] [ 50%] [32mBuilding CXX object CMakeFiles/service_main.dir/main.cpp.o[0m
+[16.724s] [100%] [32m[1mLinking CXX executable service_main[0m
+[17.058s] [100%] Built target service_main
+[17.184s] Invoked command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service -- -j6 -l6
+[17.199s] Invoking command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service
+[18.379s] -- Install configuration: ""
+[18.379s] -- Execute custom install script
+[18.379s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/lib/examples_rclcpp_minimal_service/service_main
+[18.379s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_minimal_service
+[18.379s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_minimal_service
+[18.379s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/ament_prefix_path.sh
+[18.569s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/ament_prefix_path.dsv
+[18.689s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/path.sh
+[18.689s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/environment/path.dsv
+[18.689s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.bash
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.sh
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.zsh
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/local_setup.dsv
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/package.dsv
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/ament_index/resource_index/packages/examples_rclcpp_minimal_service
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/cmake/examples_rclcpp_minimal_serviceConfig.cmake
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/cmake/examples_rclcpp_minimal_serviceConfig-version.cmake
+[18.690s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_minimal_service/share/examples_rclcpp_minimal_service/package.xml
+[18.784s] Invoked command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/vboxuser/ros2_ws/build/examples_rclcpp_minimal_service

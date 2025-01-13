@@ -1,0 +1,5 @@
+[console_scripts]
+TwinCAT_Add_Route = py_srvcli.TwinCAT_Add_Route:main
+client = py_srvcli.client_member_function:main
+service = py_srvcli.service_member_function:main
+

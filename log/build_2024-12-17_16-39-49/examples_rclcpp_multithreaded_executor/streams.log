@@ -1,0 +1,72 @@
+[0.345s] Invoking command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/vboxuser/ros2_ws/src/examples/rclcpp/executors/multithreaded_executor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor
+[2.328s] -- The C compiler identification is GNU 11.4.0
+[2.803s] -- The CXX compiler identification is GNU 11.4.0
+[2.869s] -- Detecting C compiler ABI info
+[3.182s] -- Detecting C compiler ABI info - done
+[3.212s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.213s] -- Detecting C compile features
+[3.236s] -- Detecting C compile features - done
+[3.286s] -- Detecting CXX compiler ABI info
+[4.789s] -- Detecting CXX compiler ABI info - done
+[5.132s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.132s] -- Detecting CXX compile features
+[5.132s] -- Detecting CXX compile features - done
+[5.133s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[5.541s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[5.756s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[5.967s] -- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+[6.179s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[6.210s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.246s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.292s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.391s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.694s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[6.726s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[7.022s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[7.131s] -- Found FastRTPS: /opt/ros/humble/include  
+[7.310s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.359s] -- Looking for pthread.h
+[7.602s] -- Looking for pthread.h - found
+[7.603s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[8.013s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[8.018s] -- Found Threads: TRUE  
+[8.477s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[9.052s] -- Added test 'copyright' to check source files copyright and LICENSE
+[9.092s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[9.092s] -- Configured cppcheck include dirs: 
+[9.092s] -- Configured cppcheck exclude dirs and/or files: 
+[9.134s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[9.140s] -- Configured cpplint exclude dirs and/or files: 
+[9.148s] -- Added test 'lint_cmake' to check CMake code style
+[9.186s] -- Added test 'uncrustify' to check C / C++ code style
+[9.186s] -- Configured uncrustify additional arguments: 
+[9.215s] -- Added test 'xmllint' to check XML markup files
+[9.249s] -- Configuring done
+[9.326s] -- Generating done
+[9.329s] -- Build files have been written to: /home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor
+[10.029s] Invoked command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/vboxuser/ros2_ws/src/examples/rclcpp/executors/multithreaded_executor -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor
+[10.030s] Invoking command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor -- -j6 -l6
+[10.849s] [ 50%] [32mBuilding CXX object CMakeFiles/multithreaded_executor.dir/multithreaded_executor.cpp.o[0m
+[25.115s] [100%] [32m[1mLinking CXX executable multithreaded_executor[0m
+[25.480s] [100%] Built target multithreaded_executor
+[25.545s] Invoked command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor -- -j6 -l6
+[25.546s] Invoking command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor
+[25.560s] -- Install configuration: ""
+[25.560s] -- Execute custom install script
+[25.560s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/lib/examples_rclcpp_multithreaded_executor/multithreaded_executor
+[25.800s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/package_run_dependencies/examples_rclcpp_multithreaded_executor
+[25.805s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/parent_prefix_path/examples_rclcpp_multithreaded_executor
+[25.878s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/ament_prefix_path.sh
+[25.878s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/ament_prefix_path.dsv
+[25.878s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/path.sh
+[25.880s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/environment/path.dsv
+[25.899s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.bash
+[25.909s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.sh
+[25.919s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.zsh
+[25.930s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/local_setup.dsv
+[25.940s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/package.dsv
+[25.953s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/ament_index/resource_index/packages/examples_rclcpp_multithreaded_executor
+[25.963s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/cmake/examples_rclcpp_multithreaded_executorConfig.cmake
+[25.974s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/cmake/examples_rclcpp_multithreaded_executorConfig-version.cmake
+[25.989s] -- Symlinking: /home/vboxuser/ros2_ws/install/examples_rclcpp_multithreaded_executor/share/examples_rclcpp_multithreaded_executor/package.xml
+[26.005s] Invoked command in '/home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/vboxuser/dobot_ws/install/servo_action:/home/vboxuser/dobot_ws/install/dobot_moveit:/home/vboxuser/dobot_ws/install/dobot_demo:/home/vboxuser/ws_moveit2/install/moveit_configs_utils:/home/vboxuser/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/vboxuser/ros2_ws/build/examples_rclcpp_multithreaded_executor
