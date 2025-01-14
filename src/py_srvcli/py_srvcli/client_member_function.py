@@ -83,7 +83,7 @@ class MinimalClientAsync(Node, ADS_Route):
     def send_StopDrag(self):
         return self.cli2.call_async(self.reqStopDrag)    
 
-    def send_request(self): #Get Angle
+    def send_GetAngle(self): #Get Angle
         return self.cliGetAngle.call_async(self.reqGetAngle)
 
     def send_MovJ(self, a ,b, c, d, e, f):
@@ -109,15 +109,81 @@ def main():
     minimal_client = MinimalClientAsync()
     #future = minimal_client.send_request(float(sys.argv[1]), float(sys.argv[2]),float(sys.argv[3]), float(sys.argv[4]),float(sys.argv[5]), float(sys.argv[6]))
     while True:
-        future = minimal_client.send_request()
-        rclpy.spin_until_future_complete(minimal_client, future)
-        response = future.result()
+
+        # Sends Enable
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.Enable") == True: 
+            future = minimal_client.send_Enable()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+        # Sends Disable
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.Disable")== True: 
+            future = minimal_client.send_Disable()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+
+        #------------------------------------------------
+        # Sends Get State
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.GetState") == True: 
+            future = minimal_client.get_State()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+            actual_list = list(ast.literal_eval(response.robot_return))
+            print(actual_list)
+        # Sends Get ErrorID
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.ErrorID") == True: 
+            future = minimal_client.get_ErrorID()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+            actual_list = list(ast.literal_eval(response.robot_return))
+            print(actual_list)
+        # Sends Error Clear
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.ClearError")  == True: 
+            future = minimal_client.send_ErrorClear()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+            actual_list = list(ast.literal_eval(response.robot_return))
+            print(actual_list)
+
+        #------------------------------------------------
+        # Sends Disable
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.StartDrag")  == True: 
+            future = minimal_client.send_StartDrag()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+        # Sends Disable
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.StopDrag")  == True: 
+            future = minimal_client.send_StopDrag()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+
+        #------------------------------------------------
+        # Sends Get Angle Request
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.getJoints") == True: 
+            future = minimal_client.send_GetAngle()
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+            actual_list = list(ast.literal_eval(response.robot_return))
+            print(actual_list)
+            minimal_client.Write_Variable("MAIN.fb_Dobot.aCurrentJoints",actual_list)
+
         #minimal_client.get_logger().info(
         #    'Result:'+ response.robot_return)
-        actual_list = list(ast.literal_eval(response.robot_return))
-        print(actual_list)
-        minimal_client.Write_Variable("MAIN.fb_Dobot.aCurrentJoints",actual_list)
+        #actual_list = list(ast.literal_eval(response.robot_return))
+        #print(actual_list)
+        #minimal_client.Write_Variable("MAIN.fb_Dobot.aCurrentJoints",actual_list)
     
+        #------------------------------------------------
+        # Send Mov j
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.MovJ")  == True: 
+            future = minimal_client.send_MovJ(float(sys.argv[1]), float(sys.argv[2]),float(sys.argv[3]), float(sys.argv[4]),float(sys.argv[5]), float(sys.argv[6]))
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
+
+        # Send Mov L
+        if minimal_client.Read_Variable("MAIN.fb_Dobot.MovL")  == True: 
+            future = minimal_client.send_MovL(float(sys.argv[1]), float(sys.argv[2]),float(sys.argv[3]), float(sys.argv[4]),float(sys.argv[5]), float(sys.argv[6]))
+            rclpy.spin_until_future_complete(minimal_client, future)
+            response = future.result()
     '''try:
         rclpy.spin(minimal_client)  # Keep the node running
     except KeyboardInterrupt:

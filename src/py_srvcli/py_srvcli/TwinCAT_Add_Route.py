@@ -1,25 +1,29 @@
 import pyads
 import socket
+import yaml
+from termcolor import colored
 
-TextFile='/home/vboxuser/ros2_ws/install/py_srvcli/share/py_srvcli/resource/PLC_Info.txt'
+#TextFile='/home/vboxuser/ros2_ws/install/py_srvcli/share/py_srvcli/resource/PLC_Info.txt'
+#TextFile='/home/vboxuser/ros2_ws/src/py_srvcli/resource/PLC_Info.txt'
+TextFile='/home/vboxuser/ros2_ws/src/py_srvcli/resource/com_comfig.yaml'
 
 class ADS_Route():
     def __init__(self):
         super().__init__() 
         self.varialbe_list =[[],[]]
         self.resetableBool = True
-        self.USERNAME, self.PASSWORD, self.TARGET_IP, self.AMSNETID = self.Read_ConnectionInfo(TextFile)
-        self.LOCAL_AMSNETID, self.LOCAL_IP = self.Set_LocalAMS()
+        self.USERNAME, self.PASSWORD, self.TARGET_IP, self.AMSNETID, self.LOCAL_AMSNETID, self.LOCAL_IP, self.ROUTE_NAME  = self.Read_ConnectionInfo(TextFile)
+        #self.LOCAL_AMSNETID, self.LOCAL_IP = self.Set_LocalAMS()
         self.Add_Route(self.LOCAL_AMSNETID,
                        self.LOCAL_IP,
                        self.TARGET_IP,
                        self.USERNAME,
                        self.PASSWORD,
-                       'OOP pyads')
+                       self.ROUTE_NAME)
         self.plc=self.Open_Connection(self.AMSNETID,self.TARGET_IP)
         
     def Read_ConnectionInfo(self, Filename):
-        print("\n- Opening file: "+Filename)
+        '''print("\n- Opening file: "+Filename)
         print("-----------------------------------------------")
         f = open(Filename, "r")
         USERNAME=f.readline().replace("\n", "")
@@ -31,14 +35,44 @@ class ADS_Route():
         AMSNETID=f.readline().replace("\n", "")
         print("AMS NET ID: "+ repr(AMSNETID))
         print("-----------------------------------------------")
-        f.close()
-        return USERNAME, PASSWORD, TARGET_IP, AMSNETID
+        f.close()'''
+
+        with open(Filename, "r") as file:
+            data = yaml.safe_load(file)
+        # Box width
+        box_width = 65
+        content_width = box_width - 4  # Subtract space for borders (│ and │)
+        # Print the top border
+        print("╭─ Twin"+colored('\033[1m'+'CAT', 'red')+'\033[0m'+" pyAds ROS2 " + "─" * (box_width - 25) + "╮")
+        # Print a separator
+        # Print the header
+        header = " This is a demo for connecting TwinCAT to ROS2 via pyAds "
+        print("│" + header.center(content_width) + "│")
+
+        print("├" + "─" * (box_width - 4) + "┤")
+        # Helper function to print each line with proper padding
+        def print_line(key, value):
+            line = f"{key}: {value}"  # Construct the key-value pair
+            # Ensure it fits exactly in the content_width
+            print("│" + line.ljust(content_width) + "│")
+        # Add each line
+        print_line("Route Name", repr(data["route_name"]))
+        print_line("Local AmsNetID", repr(data["sender_ams"]))
+        print_line("Local IP", repr(data["local_ip"]))
+        print_line("PLC AmsNetID", repr(data["remote_ads"]))
+        print_line("PLC IP adress", repr(data["plc_ip"]))
+        print_line("Username", repr(data["Username"]))
+        print_line("Password", repr(data["Password"]))
+
+        # Print the bottom border
+        print("╰" + "─" * (box_width - 4) + "╯")
+        return data["Username"], data["Password"], data["plc_ip"], data["remote_ads"], data["sender_ams"], data["local_ip"], data["route_name"]
     
     def Add_Route(self, SENDER_AMS, HOSTNAME, PLC_IP, USERNAME, PASSWORD, ROUTE_NAME):
         print("\n- Adding Route to IPC")
         print("-----------------------------------------------")
         pyads.open_port()
-        #pyads.set_local_address(SENDER_AMS)
+        pyads.set_local_address(SENDER_AMS)
         try:
             pyads.add_route_to_plc(SENDER_AMS, 
                                 HOSTNAME, 
@@ -127,7 +161,7 @@ class ADS_Route():
             return False
         
 def main():
-
+    testObject=ADS_Route();
     pass
 
 if __name__ == "__main__":
