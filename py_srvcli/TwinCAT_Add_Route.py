@@ -1,4 +1,4 @@
-#import pyads
+import pyads
 import socket
 import yaml
 from termcolor import colored
