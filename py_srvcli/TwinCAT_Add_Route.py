@@ -1,11 +1,16 @@
-import pyads
+#import pyads
 import socket
 import yaml
 from termcolor import colored
+import os
 
+# Get the directory containing the script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+print(current_dir)
+TextFile = os.path.join(os.path.dirname(current_dir), 'resource', 'com_comfig.yaml')
 #TextFile='/home/vboxuser/ros2_ws/install/py_srvcli/share/py_srvcli/resource/PLC_Info.txt'
 #TextFile='/home/vboxuser/ros2_ws/src/py_srvcli/resource/PLC_Info.txt'
-TextFile='~/ros2_ws/src/py_srvcli/py_srvcli/resource/com_comfig.yaml'
+#TextFile='../resource/com_comfig.yaml'
 
 class ADS_Route():
     def __init__(self):
