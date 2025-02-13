@@ -5,7 +5,7 @@ from termcolor import colored
 
 #TextFile='/home/vboxuser/ros2_ws/install/py_srvcli/share/py_srvcli/resource/PLC_Info.txt'
 #TextFile='/home/vboxuser/ros2_ws/src/py_srvcli/resource/PLC_Info.txt'
-TextFile='../resource/com_comfig.yaml'
+TextFile='~/ros2_ws/src/py_srvcli/py_srvcli/resource/com_comfig.yaml'
 
 class ADS_Route():
     def __init__(self):
